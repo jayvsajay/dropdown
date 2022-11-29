@@ -24,23 +24,20 @@ function DropDown({listvalues}) {
     setState(e.currentTarget.textContent);
   };
   return (
-    <div className="dropdown" ref={dropdownref}>
+    <div className="dropdown"  ref={dropdownref}>
      <button className="Btn">
-        <div className="btnTop">
-        {!state && !isOpen && <p className="defaultvalue">Default value</p>}
-        {state && !isOpen && <p className="selected">Document selected</p>}
+     {state && !isOpen && <p className="selected">{state}</p>}
+        {!state && !isOpen && <p className="defaultvalue">Select Item</p>}
         {isOpen && <p className="activevalue">Active document</p>}
-                <i className={isOpen ? "fa fa-angle-up icons" : "fa fa-angle-down icons"}></i>
-        </div>
-        
-        <div className="hinttext">{state && isOpen ? 'hint Text' : state}</div>
+                <i className={isOpen ? "fa fa-angle-up icons" : "fa fa-angle-down icons"}></i> 
       </button>
       {isOpen && (
-        <div className="dropdown-content">
+        <div className="dropdown-content"  >
           {listvalues.map((list) => (
             <div
               className={`dropdownoption ${state === list && "selectedvalue"}`}
               onClick={handleClick}
+              key={list}
             >
               {list}
             </div>

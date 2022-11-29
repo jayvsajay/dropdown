@@ -1,0 +1,5 @@
+<div className="btnTop">
+        {!state && !isOpen && <p className="defaultvalue">Select Item</p>}
+        {isOpen && <p className="activevalue">Active document</p>}
+                <i className={isOpen ? "fa fa-angle-up icons" : "fa fa-angle-down icons"}></i>
+        </div>

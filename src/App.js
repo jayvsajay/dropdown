@@ -1,6 +1,6 @@
 import React from "react";
 import './App.css'
-import DropDown from './components/DropDOwn/DropDown';
+import DropDown from './components/DropDown/DropDown';
 
 const listvalues = ["Blog", "Academy", "youtube"];
 export default function App() {
